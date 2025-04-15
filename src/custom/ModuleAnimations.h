@@ -387,7 +387,7 @@ public:
                     ESP_LOGD(TAG, "addExe success %s\n", executable.exeExist?"true":"false");
         
                     if (executable.exeExist)
-                        executable.execute("main"); //background task (async - vs sync)
+                        executable.executeAsTask("main"); //background task (async - vs sync)
                     else
                         ESP_LOGD(TAG, "error %s", executable.error.error_message.c_str());
 
